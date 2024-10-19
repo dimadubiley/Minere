@@ -3,15 +3,15 @@
 #include "Minere.h"
 using namespace std;
 
-int MyString::objectCount = 0;
+int Minere::objectCount = 0;
 
 int main()
 {
-    MyString obj1("Hello");
+    Minere obj1("Hello");
     obj1.Print();
-    MyString obj2(obj1);
+    Minere obj2(obj1);
     obj2.Print();
 
-    MyString::ShowObjectCount();
+    Minere::ShowObjectCount();
 
 }

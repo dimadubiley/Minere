@@ -1,7 +1,7 @@
 #pragma once
 
 
-class MyString
+class Minere
 {
     char* str;
     int length;
@@ -9,11 +9,20 @@ class MyString
     static int objectCount;
 
 public:
-    MyString();
-    MyString(const char* obj);
-    MyString(const MyString& obj);
-    ~MyString();
+    Minere();
+    Minere(int size);
+    Minere(const char* obj);
+    Minere(const Minere& obj);
+    ~Minere();
+    void Input();
     void Print() const;
+    void MyStrcpy(Minere& obj);
+    bool MyStrStr(const char* substr);
+    int MyChr(char c);
+    int MyStrLen();
+    void MyStrCat(Minere& b);
+    void MyDelChr(char c);
+    int MyStrCmp(Minere& b);
     static void ShowObjectCount();
 
 };
