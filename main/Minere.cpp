@@ -103,3 +103,14 @@ void Minere::ShowObjectCount()
 {
     cout << "Number of objects created: " << objectCount << endl;
 }
+
+char& Minere::operator[](int index)
+{
+    if (index < 0 || index >= length) {
+        cerr << "Index out of range\n";
+        exit(1);
+    }
+    return str[index];
+}
+
+

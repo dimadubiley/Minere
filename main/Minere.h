@@ -1,8 +1,7 @@
 #pragma once
 
 
-class Minere
-{
+class Minere {
     char* str;
     int length;
 
@@ -14,6 +13,7 @@ public:
     Minere(const char* obj);
     Minere(const Minere& obj);
     ~Minere();
+
     void Input();
     void Print() const;
     void MyStrcpy(Minere& obj);
@@ -25,5 +25,6 @@ public:
     int MyStrCmp(Minere& b);
     static void ShowObjectCount();
 
+    char& operator[](int index);
 };
 
