@@ -1,16 +1,17 @@
 #include <iostream>
-#include <Windows.h>
 #include "Minere.h"
-using namespace std;
 
-int Minere::objectCount = 0;
+using namespace std;
 
 int main()
 {
     Minere obj1("Hello");
-    obj1.Print();
-    Minere obj2(obj1);
-    obj2.Print();
+    cout << "obj1: " << obj1 << std::endl;
+
+    Minere obj2;
+    cout << "Enter a string for obj2: ";
+    cin >> obj2;
+    cout << "obj2: " << obj2 << std::endl;
 
     Minere::ShowObjectCount();
 

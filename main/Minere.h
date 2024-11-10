@@ -1,10 +1,10 @@
 #pragma once
+#include <iostream>
 
-
-class Minere {
+class Minere
+{
     char* str;
     int length;
-
     static int objectCount;
 
 public:
@@ -26,5 +26,7 @@ public:
     static void ShowObjectCount();
 
     char& operator[](int index);
-};
 
+    friend ostream& operator<<(ostream& os, const Minere& obj);
+    friend istream& operator>>(istream& is, Minere& obj);
+};
